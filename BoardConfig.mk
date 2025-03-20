@@ -68,7 +68,7 @@ TARGET_USES_VULKAN := true
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_RAMDISK_OFFSET := 0x02007000
-BOARD_KERNEL_TAGS_OFFSET : = 0x6676ad6f
+BOARD_KERNEL_TAGS_OFFSET := 0x6676ad6f
 BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 msm_geni_serial.con_enabled=0 printk.devkmsg=on firmware_class.path=/vendor/firmware_mnt/image bootconfig loop.max_part=7
 BOARD_KERNEL_PAGESIZE := 4096
 
