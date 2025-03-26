@@ -24,38 +24,17 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-import /init.recovery.qcom_decrypt.rc
-import /init.recovery.display.rc
-import /init.recovery.samsung.rc 
-
-on early-init
-    mkdir /mnt/vendor/efs 0771 radio system
 
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
-    export LD_LIBRARY_PATH /system/lib64:/system/lib64/hw:/vendor/lib64:/vendor/lib64/hw
-    symlink /dev/block/by-name/steady /dev/block/steady
-    symlink /dev/block/by-name/persistent /dev/block/persistent
     setprop sys.usb.configfs 1
-    setprop prepdecrypt.setpatch true
-    setprop prepdecrypt.loglevel 2
-
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
-    wait /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.dwc3}/mode
-    write /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.dwc3}/mode peripheral
+    wait /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/mode
+    write /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/mode peripheral
     wait /sys/class/udc/${ro.boot.usbcontroller} 1
-
-on boot 
-    start health-hal-2-1
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    # Mount firmware
-    mkdir /vendor/firmware_mnt
-    mount vfat /dev/block/bootdevice/by-name/apnhlos /vendor/firmware_mnt ro
-
-    export ANDROID_ROOT /system_root
-
