@@ -1,0 +1,17 @@
+<!--
+    Input:
+        device/qcom/parrot66/manifest_parrot.xml
+-->
+<manifest version="4.0" type="device" target-level="202404">
+    <hal format="aidl">
+        <name>android.hardware.gatekeeper</name>
+        <fqname>IGatekeeper/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.bluetooth</name>
+        <fqname>ISehBluetooth/default</fqname>
+    </hal>
+    <sepolicy>
+        <version>202404</version>
+    </sepolicy>
+</manifest>
