@@ -1,0 +1,11 @@
+# Samsung A36 5G Vendor Properties
+ro.product.first_api_level=35
+ro.vendor.qti.speaker.version=2
+ro.vendor.qti.sensors.multishake=false
+ro.vendor.perf.scroll_opt=true
+ro.vendor.perf.gesture_pred=true
+ro.build.version.sdk=35
+persist.vendor.bt.a2dp_offload_cap=true
+vendor.display.lhbm_opt=1
+vendor.display.early_wakeup=1
+vendor.vrr_system=1
