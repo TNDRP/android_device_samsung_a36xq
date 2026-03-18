@@ -5,10 +5,10 @@ ro.product.brand=samsung
 ro.product.manufacturer=samsung
 
 # Build properties
-ro.build.id=AP3A.240905.015.A2
-ro.build.display.id=AP3A.240905.015.A2 A366EXXU1AYB9 release-keys
-ro.build.version.release=15
-ro.build.version.sdk=35
+ro.build.id=BP2A.250605.031.A3
+ro.build.display.id=BP2A.250605.031.A3 A366EXU1AYB9 release-keys
+ro.build.version.release=16
+ro.build.version.sdk=36
 
 # Display
 ro.sf.lcd_density=390

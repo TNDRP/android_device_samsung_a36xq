@@ -6,6 +6,7 @@
 system	/system	erofs	ro	slotselect,wait,logical,first_stage_mount,avb=vbmeta_system,avb_keys=/avb
 system	/system	f2fs	ro	slotselect,wait,logical,first_stage_mount,avb=vbmeta_system,avb_keys=/avb
 system	/system	ext4	ro	slotselect,wait,logical,first_stage_mount,avb=vbmeta_system,avb_keys=/avb
+system_ext	/system_ext	erofs	ro	slotselect,wait,logical,first_stage_mount,avb=vbmeta_system,avb_keys=/avb
 vendor	/vendor	erofs	ro	slotselect,wait,logical,first_stage_mount,avb=vbmeta_system
 vendor_dlkm	/vendor_dlkm	erofs	ro	slotselect,wait,logical,first_stage_mount
 system_dlkm	/system_dlkm	erofs	ro	slotselect,wait,logical,first_stage_mount
@@ -20,3 +21,8 @@ odm         /odm            erofs	ro	slotselect,wait,logical,first_stage_mount,a
 
 # Boot
 /dev/block/by-name/misc	/misc	emmc	defaults	defaults,first_stage_mount
+
+# Additional partitions
+/dev/block/by-name/cache	/cache	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard	wait,check
+/dev/block/by-name/persist	/mnt/vendor/persist	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard	wait,check
+/dev/block/by-name/efs	/efs	ext4	noatime,nosuid,nodev,noauto_da_alloc	wait,check

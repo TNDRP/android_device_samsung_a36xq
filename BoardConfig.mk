@@ -3,6 +3,7 @@ DEVICE_PATH := device/samsung/a36xq
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
+    system_dlkm \
     vendor \
     dtbo \
     init_boot \
@@ -42,7 +43,7 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # System SDK
-BOARD_SYSTEMSDK_VERSIONS := 32
+BOARD_SYSTEMSDK_VERSIONS := 36
 
 # Crypto
 TW_INCLUDE_CRYPTO := false
@@ -96,6 +97,7 @@ BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := \
+    system_dlkm \
     vendor \
     odm \
     system \
