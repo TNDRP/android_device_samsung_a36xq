@@ -14,7 +14,7 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/bootctl
 
 # Boot control, Firmware
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti
+    android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qti.recovery 
 
 PRODUCT_PACKAGES += \
