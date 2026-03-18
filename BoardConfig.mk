@@ -42,6 +42,9 @@ TARGET_USES_UEFI := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# System SDK
+BOARD_SYSTEMSDK_VERSIONS := 36
+
 # Crypto
 TW_INCLUDE_CRYPTO := false
 TW_INCLUDE_CRYPTO_FBE := false
@@ -173,3 +176,14 @@ TW_DEVICE_VERSION := SavedByLight_01
 
 # Workaround for copyout error
 TARGET_COPY_OUT_VENDOR := vendor
+
+# OrangeFox Recovery Configuration
+FOX_AB_DEVICE := 1
+TW_NO_SCREEN_TIMEOUT := true
+TW_NO_SCREEN_BLANK := true
+FOX_DEVICE_NAME := Samsung Galaxy A36 5G
+OF_USE_LZMA_COMPRESSION := 0
+
+# OrangeFox - Disable TWRP specific things for OFOX
+TW_EXCLUDE_TWRPAPP := true
+TW_INCLUDE_FASTBOOTD := true

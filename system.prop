@@ -1,0 +1,18 @@
+# Samsung Galaxy A36 5G - OrangeFox System Properties
+ro.product.device=a36xq
+ro.product.model=SM-A366E
+ro.product.brand=samsung
+ro.product.manufacturer=samsung
+
+# Build properties
+ro.build.id=BP2A.250605.031.A3
+ro.build.display.id=BP2A.250605.031.A3 A366EXU1AYB9 release-keys
+ro.build.version.release=16
+ro.build.version.sdk=36
+
+# Display
+ro.sf.lcd_density=390
+
+# Ril
+ro.ril.gprsclass=10
+ro.ril.hsxpa=1

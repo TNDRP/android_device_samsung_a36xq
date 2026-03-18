@@ -1,4 +1,4 @@
-LOCAL_PATH := device/samsung/a36x
+LOCAL_PATH := device/samsung/a36xq
 
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
@@ -14,7 +14,7 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/bootctl
 
 # Boot control, Firmware
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti
+    android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qti.recovery 
 
 PRODUCT_PACKAGES += \
@@ -39,8 +39,8 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # API levels
-BOARD_API_LEVEL := 35
-PRODUCT_SHIPPING_API_LEVEL := 35
+BOARD_API_LEVEL := 36
+PRODUCT_SHIPPING_API_LEVEL := 36
 
 # fastbootd
 PRODUCT_PACKAGES += \
