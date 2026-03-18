@@ -3,7 +3,6 @@ DEVICE_PATH := device/samsung/a36xq
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    system_dlkm \
     vendor \
     dtbo \
     init_boot \
@@ -97,7 +96,6 @@ BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := \
-    system_dlkm \
     vendor \
     odm \
     system \
